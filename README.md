@@ -1,6 +1,6 @@
 # Visualizing the learned space-time attention 
 
-This repository contain implementations of __Attention Rollout__ for __TimeSformer__ model. 
+This repository contains implementations of __Attention Rollout__ for __TimeSformer__ model. 
 
 Attention Rollout is presented in paper [Quantifying Attention Flow inTransformers](https://arxiv.org/abs/2005.00928). It is a method to use attention weights to understand how a self-attention network works, and provides valuable insights into which part of the input is the most important when generating the output. 
 
