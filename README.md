@@ -13,7 +13,7 @@ For divided space-time attention, each token has `2` dimensions,  let's denote t
 
 Each encoding block contains a <u>time attention layer</u> and a <u>space attention layer</u>. During __time attention__ block, each patch token only attends to patches at same spatial locations; During __space attention__, each patch only attends to the patches from same frame. If we use `T` and `S` to denote __time attention weights__ and __space attention weights__ respectively,`T[i,j,q]` would represent the attention of `z(i,j)` to `z(i,q)` from previous layer during time attention layer and `S[i,j,k]` would represent the space attention of `z(i,j)` to `z(k,j)` from time attention layer;
 
-When we combined the space and time attention, each patch token will attends to all patches at every spatial locations from all frames (with the exception of the `cls_token`, we will discuss about it later) through an __unique path__. The attention path of `z(i,j)` to `z(p,q)` (where `k != 0`) is 
+When we combined the space and time attention, each patch token will attends to all patches at every spatial locations from all frames (with the exception of the `cls_token`, we will discuss about it later) through an __unique path__. The attention path of `z(i,j)` to `z(p,q)` (where `p != 0`) is 
 * space attention: `z(i,j)`-> `z(k,j)` 
 * time attention: `z(k,j)`-> `z(k,q)`
 
