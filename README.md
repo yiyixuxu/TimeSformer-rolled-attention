@@ -47,6 +47,6 @@ the model focuses on the configuration of the hand when visible and the object-o
   * [Quantifying Attention Flow inTransformers](https://arxiv.org/abs/2005.00928)
   * [Is Space-Time Attention All You Need for Video Understanding?](https://arxiv.org/pdf/2102.05095.pdf)
 * code bases:
-  * https://github.com/yiyixuxu/TimeSformer
+  * [TimeSformer](https://github.com/yiyixuxu/TimeSformer)
   * [Attention flow](https://github.com/samiraabnar/attention_flow#readme)
   * [vit-explain](https://github.com/jacobgil/vit-explain/blob/main/Readme.md)
