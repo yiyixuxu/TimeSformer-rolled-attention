@@ -5,7 +5,7 @@ This repository contains implementations of __Attention Rollout__ for __TimeSfor
 Attention Rollout is presented in paper [Quantifying Attention Flow inTransformers](https://arxiv.org/abs/2005.00928). It is a method to use attention weights to understand how a self-attention network works, and provides valuable insights into which part of the input is the most important when generating the output. 
 
 
-It assumes the attention weights determine the proportion of the incoming information that can propagate through the layers and we can use attention weights as an approximation of how information flow between layers. If `A` is a 2-D attention weight matrix at layer 'l`, `A[i,j]` would represent the attention of token `i` to input token `j`. And to compute the attention to input tokens, it recursively multiply the attention weights matrices, starting from the input layer up to layer `l`.
+It assumes the attention weights determine the proportion of the incoming information that can propagate through the layers and we can use attention weights as an approximation of how information flow between layers. If `A` is a 2-D attention weight matrix at layer `l`, `A[i,j]` would represent the attention of token `i` to input token `j`. And to compute the attention to input tokens, it recursively multiply the attention weights matrices, starting from the input layer up to layer `l`.
 
 ## Implementating Attention Rollout for TimeSformer
 
