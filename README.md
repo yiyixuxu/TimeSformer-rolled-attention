@@ -5,11 +5,11 @@ This repository contains implementations of __Attention Rollout__ for __TimeSfor
 Attention Rollout is presented in paper [Quantifying Attention Flow inTransformers](https://arxiv.org/abs/2005.00928). It is a method to use attention weights to understand how a self-attention network works, and provides valuable insights into which part of the input is the most important when generating the output. 
 
 
-It assumes the attention weights determine the proportion of the incoming information that can propagate through the layers and we can use attention weights as an approximation of how information flow between layers. If `A` is a 2-D attention weight matrix at layer `i`, `A[i,j]` would represent the attention of token `i` to input token `j`. And to compute the attention to input tokens, it recursively multiply the attention weights matrices, starting from the input layer up to layer `i`.
+It assumes the attention weights determine the proportion of the incoming information that can propagate through the layers and we can use attention weights as an approximation of how information flow between layers. If `A` is a 2-D attention weight matrix at layer 'l`, `A[i,j]` would represent the attention of token `i` to input token `j`. And to compute the attention to input tokens, it recursively multiply the attention weights matrices, starting from the input layer up to layer `l`.
 
 ## Implementating Attention Rollout for TimeSformer
 
-For divided space-time attention, each token has `2` dimensions,  let's denote the output token of layer `l` as `z(p,t)`, where `p` is spatial dimension and  `t` is the time dimension; 
+For divided space-time attention, each token has `2` dimensions,  let's denote the token as `z(p,t)`, where `p` is spatial dimension and  `t` is the time dimension; 
 
 Each encoding block contains a time attention layer and a space attention layer. During __time attention__ block, each patch only attends to patches at same spatial locations; During __space attention__, each patch only attends to the patches from same frame. If we use `T` and `S` to denote time attention weights and space attention weights respectively,`T[i,j,q]` would represent the attention of `z(i,j)` to `z(i,q)` during time attention layer and `S[i,j,k]` would represent the attention of `z(i,j)` to `z(k,j)` during space attention layer;
 
