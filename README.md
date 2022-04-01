@@ -27,11 +27,13 @@ note that the classification token did not participate in the time attention lay
 ## Usage
 
 Here is a notebook demostrate how to use attention rollout to visualize space time attention learnt from TimeSformer
+
+
 [a colab notebook: Visualizing learned space time attention with attention rollout](https://colab.research.google.com/github/yiyixuxu/TimesFormer_rolled_attention/blob/main/visualizing_space_time_attention.ipynb)
 
 ## Visualizing the learned space time attention
 
-this is the example used in the TimeSformer paper to demonstrate that it can learn to attend to the
+This is the example used in the TimeSformer paper to demonstrate that the model can learn to attend to the
 relevant regions in the video in order to perform complex spatiotemporal reasoning. we can see that
 the model focuses on the configuration of the hand when visible and the object-only when not visible.
 ![alt text](https://github.com/yiyixuxu/TimesFormer_rolled_attention/blob/6f3bce9fdb35ab6178b15a27b1d7b493ae69d9aa/img.png?raw=true)
