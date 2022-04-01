@@ -17,7 +17,7 @@ When we combined the space and time attention, each patch token will attends to 
 * space attention: `z(i,j)`-> `z(p,j)` 
 * time attention: `z(p,j)`-> `z(p,q)`
 
-we can calculate the combined space time attention for this layer as 
+we can calculate the combined space time attention `W` as 
 ```python
 W[i,j,p,q] = S[i,j,p]* T[p,j,q]
 ```
